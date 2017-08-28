@@ -1,7 +1,7 @@
 """
 This program includes two parts:
 Part 1 is to stream line the process from reading, processing and analysis file from a folder
-Basically is to find files from bar module
+
 Part 2 is to demo how to connect SQL servers with pyodbc driver
 """ 
 
