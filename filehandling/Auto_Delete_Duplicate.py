@@ -2,15 +2,15 @@
 This script is used to analysis a package, This script will check any duplicate scripts for creating an index.
 if there is, then will generate a new file without duplication named FinalFile.
 
-IF NOT EXISTS (SELECT * FROM dbo.sysindexes WHERE name = N'MS_RowUpdateDateTime' and id = object_id(N'[AdmGuarantors]'))
- CREATE  INDEX [MS_RowUpdateDateTime] ON [dbo].[AdmGuarantors]([RowUpdateDateTime]) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM dbo.sysindexes WHERE name = N'UpdateDateTime' and id = object_id(N'[YourTableName]'))
+ CREATE  INDEX [UpdateDateTime] ON [dbo].[YourTableName]([UpdateDateTime]) ON [PRIMARY]
  
  
- --AdmGuarantors
-IF EXISTS (SELECT * FROM sys.objects WHERE name = N'AdmGuarantors')
+ --YourTableName
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'YourTableName')
  BEGIN 
-   IF NOT EXISTS (SELECT * FROM sysindexes WHERE name = N'MS_RowUpdateDateTime' and id = object_id(N'[AdmGuarantors]'))
-   CREATE INDEX [MS_RowUpdateDateTime] ON [dbo].[AdmGuarantors] ([RowUpdateDateTime] ASC) ON [PRIMARY] 
+   IF NOT EXISTS (SELECT * FROM sysindexes WHERE name = N'UpdateDateTime' and id = object_id(N'[YourTableName]'))
+   CREATE INDEX [UpdateDateTime] ON [dbo].[YourTableName] ([UpdateDateTime] ASC) ON [PRIMARY] 
  END 
 '''
 
@@ -26,7 +26,7 @@ lst = {}
 for element in fh:
 	#use strip to break the whole file into line
 	lines = element.strip()
-	if lines.find('MS_RowUpdateDateTime') > 0 and lines.find("object_id") >0:
+	if lines.find('UpdateDateTime') > 0 and lines.find("object_id") >0:
 		lines = lines.split(' ')
 		#pick the last element and subset the string by '[' and ']'
 		k = lines[-1][lines[-1].find("[")+1 : lines[-1].find("]")]
@@ -52,7 +52,7 @@ fh1_lst = fh1.readlines()
 print "The length of original fh1_lst is %d." %len(fh1_lst)
 for item in fh1_lst:
 	for k,v in dup_lst.items():
-		if v > 1 and item.find('MS_RowUpdateDateTime') > 0 and k in item:
+		if v > 1 and item.find('UpdateDateTime') > 0 and k in item:
 			dup_lst[k] -= 1
 			id = fh1_lst.index(item)
 			id_lst =[]

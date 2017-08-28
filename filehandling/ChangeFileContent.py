@@ -10,7 +10,7 @@ oldstr: the old content to be replaced (in string format)
 newstr: the new string (in string format)
 fileextension: example 'sql'
 
-An example: ChangeFileContent('[DataBasename]', 'LiveDb', 'sql')
+An example: ChangeFileContent('[OldDatabaseName]', 'NewDatabaseName', 'sql')
 """
 import os
 

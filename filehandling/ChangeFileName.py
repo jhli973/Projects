@@ -1,7 +1,7 @@
 #Part one: read and process files with python
 import os
 
-path = r'C:\Users\jli\Documents\CDM\SGT_Focus6.08'
+path = r'DirectoryName'
 os.chdir(path)
 ###switch the directory so the newly generated file will not be saved in the directory of the source files 
     

@@ -15,16 +15,16 @@ import json
 #==============================================================================
 
 path = raw_input('Please enter your file directory:')
-read_files =  glob.glob(os.path.join(path, '*.arr')) 
+read_files =  glob.glob(os.path.join(path, '*.txt')) 
 
 ##print the package name and save it into a file
-'''
+
 with open("File_Info.txt", "wb") as outfile:
 	for f in read_files:
 		f.replace(path+'\\', '').replace('.arr', '').replace('.PRC', '').replace('dbo.', '')
 		outfile.write(f.replace(path+'\\', '').replace('.arr', '').replace('.PRC', '').replace('dbo.', '') + "\n")
 outfile.close()	
-'''
+
 
 with open("File_Info.json", "wb") as outfile:
 	for f in read_files:

@@ -26,7 +26,7 @@ import time
 start_time = time.time()
 path = r'D:'
 os.chdir(path)
-with open("RegAcct_Providers.csv", "r") as inputfile:
+with open("SourceTableFile.csv", "r") as inputfile:
     filereader = csv.reader(inputfile, delimiter = ',')
     connection_str = """
     Driver={SQL Server Native Client 11.0};
@@ -76,13 +76,13 @@ with open("RegAcct_Providers.csv", "r") as inputfile:
             col32 = row[31]
             col33 = row[32]
             col34 = row[33]
-            sql_command = ("""INSERT INTO RegAcct_Providers (SourceID, VisitID, Provider_UnvUserID,RowUpdateDateTime,IsPrimaryCareProvider,
-            IsAdmittingProvider,IsAttendingProvider,IsEmergencyProvider,IsOtherProvider,IsFamilyProvider,IsConsultProvider,IsReferringProvider,
-            FreeTextProviderAddress1,FreeTextProviderAddress2,FreeTextProviderCity,FreeTextProviderState_MisStateProvID,FreeTextProviderZip,
-            FreeTextProviderEmail,FreeTextProviderPhone,FreeTextProviderFacsimile,FreeTextProviderNpiNumber,FreeTextProviderLicense,
-            FreeTextNameFlag,IsVisitProvider,FreeTextCareCommentsZold,AdmitProviderCareTeamComment,PrimaryCareProviderCareTeamComment,
-            AttendProviderCareTeamComment,EmergencyProviderCareTeamComment,FamilyProviderCareTeamComment,OtherProviderCareTeamComment,
-            ReferringProviderCareTeamComment,FreeTextProviderNumber,IsSupervisingProvider) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""")	
+            sql_command = ("""INSERT INTO TargetTable (SourceID, VisitID, Vendor_UnvUserID,RowUpdateDateTime,IsPrimaryCareVendor,
+            IsAdmittingVendor,IsAttendingVendor,IsEmergencyVendor,IsOtherVendor,IsFamilyVendor,IsConsultVendor,IsReferringVendor,
+            FreeTextVendorAddress1,FreeTextVendorAddress2,FreeTextVendorCity,FreeTextVendorState_MisStateProvID,FreeTextVendorZip,
+            FreeTextVendorEmail,FreeTextVendorPhone,FreeTextVendorFacsimile,FreeTextVendorNpiNumber,FreeTextVendorLicense,
+            FreeTextNameFlag,IsVisitVendor,FreeTextCareCommentsZold,AdmitVendorCareTeamComment,PrimaryCareVendorCareTeamComment,
+            AttendVendorCareTeamComment,EmergencyVendorCareTeamComment,FamilyVendorCareTeamComment,OtherVendorCareTeamComment,
+            ReferringVendorCareTeamComment,FreeTextVendorNumber,IsSupervisingVendor) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""")	
             Values = [col1, col2, col3, col4,col5,col6,col7,col8,col9,col10,col11,col12,col13,col14,col15,col16,col17,col18,col19,col20,col21,col22,col23,col24,col25,col26,col27,col28,col29,col30,col31,col32,col33,col34] 
             try: 
                 db_cursor.execute(sql_command,Values) 
@@ -99,77 +99,43 @@ print("--- %s seconds ---" % (time.time() - start_time))
 ###create a table
 '''
 sql_command =   """
-CREATE TABLE [dbo].[RegAcct_Providers](
+CREATE TABLE [dbo].[TargetTable](
 	[SourceID] [varchar](3) NOT NULL,
 	[VisitID] [varchar](30) NOT NULL,
-	[Provider_UnvUserID] [varchar](82) NOT NULL,
+	[Vendor_UnvUserID] [varchar](82) NOT NULL,
 	[RowUpdateDateTime] [datetime] NULL,
-	[IsPrimaryCareProvider] [varchar](30)  NULL,
-	[IsAdmittingProvider] [varchar](2)  NULL,
-	[IsAttendingProvider] [varchar](2)  NULL,
-	[IsEmergencyProvider] [varchar](2)  NULL,
-	[IsOtherProvider] [varchar](2)  NULL,
-	[IsFamilyProvider] [varchar](2)  NULL,
-	[IsConsultProvider] [varchar](3)  NULL,
-	[IsReferringProvider] [varchar](3)  NULL,
-	[FreeTextProviderAddress1] [varchar](45)  NULL,
-	[FreeTextProviderAddress2] [varchar](45)  NULL,
-	[FreeTextProviderCity] [varchar](45)  NULL,
-	[FreeTextProviderState_MisStateProvID] [varchar](30)  NULL,
-	[FreeTextProviderZip] [varchar](15)  NULL,
-	[FreeTextProviderEmail] [varchar](92)  NULL,
-	[FreeTextProviderPhone] [varchar](92)  NULL,
-	[FreeTextProviderFacsimile] [varchar](40)  NULL,
-	[FreeTextProviderNpiNumber] [varchar](36)  NULL,
-	[FreeTextProviderLicense] [varchar](23)  NULL,
+	[IsPrimaryCareVendor] [varchar](30)  NULL,
+	[IsAdmittingVendor] [varchar](2)  NULL,
+	[IsAttendingVendor] [varchar](2)  NULL,
+	[IsEmergencyVendor] [varchar](2)  NULL,
+	[IsOtherVendor] [varchar](2)  NULL,
+	[IsFamilyVendor] [varchar](2)  NULL,
+	[IsConsultVendor] [varchar](3)  NULL,
+	[IsReferringVendor] [varchar](3)  NULL,
+	[FreeTextVendorAddress1] [varchar](45)  NULL,
+	[FreeTextVendorAddress2] [varchar](45)  NULL,
+	[FreeTextVendorCity] [varchar](45)  NULL,
+	[FreeTextVendorState_MisStateProvID] [varchar](30)  NULL,
+	[FreeTextVendorZip] [varchar](15)  NULL,
+	[FreeTextVendorEmail] [varchar](92)  NULL,
+	[FreeTextVendorPhone] [varchar](92)  NULL,
+	[FreeTextVendorFacsimile] [varchar](40)  NULL,
+	[FreeTextVendorNpiNumber] [varchar](36)  NULL,
+	[FreeTextVendorLicense] [varchar](23)  NULL,
 	[FreeTextNameFlag] [varchar](45)  NULL,
-	[IsVisitProvider] [varchar](45)  NULL,
+	[IsVisitVendor] [varchar](45)  NULL,
 	[FreeTextCareCommentsZold] [varchar](45)  NULL,
-	[AdmitProviderCareTeamComment] [varchar](45)  NULL,
-	[PrimaryCareProviderCareTeamComment] [varchar](45)  NULL,
-	[AttendProviderCareTeamComment] [varchar](45)  NULL,
-	[EmergencyProviderCareTeamComment] [varchar](45)  NULL,
-	[FamilyProviderCareTeamComment] [varchar](45)  NULL,
-	[OtherProviderCareTeamComment] [varchar](45)  NULL,
-	[ReferringProviderCareTeamComment] [varchar](45)  NULL,
-	[FreeTextProviderNumber] [varchar](23)  NULL,
-	[IsSupervisingProvider] [varchar](3)  NULL
+	[AdmitVendorCareTeamComment] [varchar](45)  NULL,
+	[PrimaryCareVendorCareTeamComment] [varchar](45)  NULL,
+	[AttendVendorCareTeamComment] [varchar](45)  NULL,
+	[EmergencyVendorCareTeamComment] [varchar](45)  NULL,
+	[FamilyVendorCareTeamComment] [varchar](45)  NULL,
+	[OtherVendorCareTeamComment] [varchar](45)  NULL,
+	[ReferringVendorCareTeamComment] [varchar](45)  NULL,
+	[FreeTextVendorNumber] [varchar](23)  NULL,
+	[IsSupervisingVendor] [varchar](3)  NULL
 ) ON [PRIMARY]
 
-"""
-
-
-
-
-
-###process the file, find your interested tables and put them into a list.
-
-			
-##Part two: connect python to SQL server				
-			
-##=================================================================
-###connect to sql server with pyodbc. you need to download pyodbc driver		
-###you may also try pymssql	
-
-db_connection = pyodbc.connect(connection_str)
-#db_connection.autocommit = True
-db_cursor = db_connection.cursor()
-sql_command =   """
-SELECT PatientIDNew, Address2 FROM T
-
-try:
-	db_cursor.execute(sql_command)
-except pyodbc.ProgrammingError:
-	print("command fail to execute.")
-
-row = db_cursor.fetchone()
-while row:
-	##We only select two column so your index should not great than 1
-    print str(row[0]) + " " + str(row[1])   
-    row = db_cursor.fetchone()			
-db_cursor.close()
-del db_cursor
-db_connection.close()
 """
 
 '''

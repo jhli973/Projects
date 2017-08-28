@@ -2,15 +2,15 @@
 This script is used to analysis a package, This script will check any duplicate scripts for creating an index.
 .
 
-IF NOT EXISTS (SELECT * FROM dbo.sysindexes WHERE name = N'MS_RowUpdateDateTime' and id = object_id(N'[AdmGuarantors]'))
- CREATE  INDEX [MS_RowUpdateDateTime] ON [dbo].[AdmGuarantors]([RowUpdateDateTime]) ON [PRIMARY]
+IF NOT EXISTS (SELECT * FROM dbo.sysindexes WHERE name = N'Idx_UpdateDateTime' and id = object_id(N'[TableName]'))
+ CREATE  INDEX [Idx_UpdateDateTime] ON [dbo].[TableName]([UpdateDateTime]) ON [PRIMARY]
  
  
- --AdmGuarantors
-IF EXISTS (SELECT * FROM sys.objects WHERE name = N'AdmGuarantors')
+ --TableName
+IF EXISTS (SELECT * FROM sys.objects WHERE name = N'TableName')
  BEGIN 
-   IF NOT EXISTS (SELECT * FROM sysindexes WHERE name = N'MS_RowUpdateDateTime' and id = object_id(N'[AdmGuarantors]'))
-   CREATE INDEX [MS_RowUpdateDateTime] ON [dbo].[AdmGuarantors] ([RowUpdateDateTime] ASC) ON [PRIMARY] 
+   IF NOT EXISTS (SELECT * FROM sysindexes WHERE name = N'Idx_UpdateDateTime' and id = object_id(N'[TableName]'))
+   CREATE INDEX [Idx_UpdateDateTime] ON [dbo].[TableName] ([UpdateDateTime] ASC) ON [PRIMARY] 
  END 
 '''
 
@@ -27,7 +27,7 @@ lst = {}
 for element in fh:
 	#use strip to break the whole file into line
 	lines = element.strip()
-	if lines.find('MS_RowUpdateDateTime') > 0 and lines.find("object_id") >0:
+	if lines.find('Idx_UpdateDateTime') > 0 and lines.find("object_id") >0:
 		lines = lines.split(' ')
 		#pick the last element and subset the string by '[' and ']'
 		k = lines[-1][lines[-1].find("[")+1 : lines[-1].find("]")]

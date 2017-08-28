@@ -1,7 +1,6 @@
 """
 This program includes two parts:
 Part 1 is to stream line the process from reading, processing and analysis file from a folder
-Basically is to find files from bar module
 Part 2 is to demo how to connect SQL servers with pyodbc driver
 """ 
 
@@ -12,12 +11,12 @@ import re
 
 ###Read all files into a file
 
-#path = r'C:\Users\jli\Source\Workspaces\Juniper2013\Juniper.root\JuniperLoad\Common\Focus'
-path = r'C:\Users\jli\Source\Workspaces\Juniper2013\Juniper.root\JuniperLoad\Clients\6.08'
-read_files =  glob.glob(os.path.join(path, '*.arr'))
+
+path = r'SourceDirectoryPath'
+read_files =  glob.glob(os.path.join(path, '*.txt'))
 #print read_files
 ###switch the directory so the newly generated file will not be saved in the directory of the source files 
-path1 = r'C:\Users\jli\Documents\TEST'
+path1 = r'DestinationDirectoryPath'
 os.chdir(path1)
 with open("myFilesReadLine.txt", "w") as outfile:   #python 2.7 use "wb"
     for f in read_files:
@@ -26,7 +25,7 @@ with open("myFilesReadLine.txt", "w") as outfile:   #python 2.7 use "wb"
             print(f)
         ##to read the whole file, please use the code below
         #with open(f, "rb") as infile:  
-        #	outfile.write(infile.read())
+        #outfile.write(infile.read())
         ##to read line by line, please use the code below
             for line in open(f, 'r'):
                 line = line.strip()
@@ -34,21 +33,21 @@ with open("myFilesReadLine.txt", "w") as outfile:   #python 2.7 use "wb"
 outfile.close()
 
 ###process the file, find your interested tables and put them into a list.
-excludedtables = ['Fragmentation', 'ListOfTables' ,'IsAllNine(SUBSTRING', 'sysobjects', 'sysindexes', 'EPJuniperPatients', 'JuniperVisits', 'EPFMJuniperVisits', 'EPJuniperVisits']
+excludedtables = ['']
 lst = list()
 fh = open("myFilesReadLine.txt", 'r')  #python 2.7 use "rb" instead of "r"
 for line in fh:
     groups = line.strip().split()
     #print type(groups)
     for group in groups:
-        group = group.replace('([RowUpdateDateTime])', '').replace(')', '').replace("'", '')
+        group = group.replace('([UpdateDateTime])', '').replace(')', '').replace("'", '')
         #find group contains '.dbo.' and 'Bar' but not 'jsplit'
         if group.find('.dbo.') > 1 and group.find('jsplit') < 1 and group.find('#') < 0:
             table = group[group.find('.dbo.')+5:len(group)]
             if not table in lst and len(table) > 2 and table not in excludedtables:
                 
                 lst.append(table)
-        if group.find('([RowUpdateDateTime])') > 1:
+        if group.find('([UpdateDateTime])') > 1:
             
             if group.find('.dbo.') > 1 :
                 table = group[group.find('.dbo.')+5:len(group)]
@@ -56,7 +55,7 @@ for line in fh:
                     print(table)
                     lst.append(table)
             else:
-                table = group[0:group.find('([RowUpdateDateTime]')-1]
+                table = group[0:group.find('([UpdateDateTime]')-1]
             #append unique table in the list
                 if table not in lst and len(table) > 2 and table not in excludedtables:
                     lst.append(table)
@@ -64,7 +63,7 @@ for line in fh:
 print(len(lst))
 lst_sorted = sorted(lst)
 
-with open("JuniperFocus608Tables.txt", 'w') as JuniperFocusTables:
+with open("Tables.txt", 'w') as JuniperFocusTables:
     for tbl in lst_sorted:
         JuniperFocusTables.write(tbl + "\n")
 
