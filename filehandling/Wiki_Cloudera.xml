@@ -1,0 +1,181 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="en">
+  <siteinfo>
+    <sitename>Wikipedia</sitename>
+    <dbname>enwiki</dbname>
+    <base>https://en.wikipedia.org/wiki/Main_Page</base>
+    <generator>MediaWiki 1.28.0-wmf.4</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Media</namespace>
+      <namespace key="-1" case="first-letter">Special</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Talk</namespace>
+      <namespace key="2" case="first-letter">User</namespace>
+      <namespace key="3" case="first-letter">User talk</namespace>
+      <namespace key="4" case="first-letter">Wikipedia</namespace>
+      <namespace key="5" case="first-letter">Wikipedia talk</namespace>
+      <namespace key="6" case="first-letter">File</namespace>
+      <namespace key="7" case="first-letter">File talk</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki talk</namespace>
+      <namespace key="10" case="first-letter">Template</namespace>
+      <namespace key="11" case="first-letter">Template talk</namespace>
+      <namespace key="12" case="first-letter">Help</namespace>
+      <namespace key="13" case="first-letter">Help talk</namespace>
+      <namespace key="14" case="first-letter">Category</namespace>
+      <namespace key="15" case="first-letter">Category talk</namespace>
+      <namespace key="100" case="first-letter">Portal</namespace>
+      <namespace key="101" case="first-letter">Portal talk</namespace>
+      <namespace key="108" case="first-letter">Book</namespace>
+      <namespace key="109" case="first-letter">Book talk</namespace>
+      <namespace key="118" case="first-letter">Draft</namespace>
+      <namespace key="119" case="first-letter">Draft talk</namespace>
+      <namespace key="446" case="first-letter">Education Program</namespace>
+      <namespace key="447" case="first-letter">Education Program talk</namespace>
+      <namespace key="710" case="first-letter">TimedText</namespace>
+      <namespace key="711" case="first-letter">TimedText talk</namespace>
+      <namespace key="828" case="first-letter">Module</namespace>
+      <namespace key="829" case="first-letter">Module talk</namespace>
+      <namespace key="2300" case="first-letter">Gadget</namespace>
+      <namespace key="2301" case="first-letter">Gadget talk</namespace>
+      <namespace key="2302" case="case-sensitive">Gadget definition</namespace>
+      <namespace key="2303" case="case-sensitive">Gadget definition talk</namespace>
+      <namespace key="2600" case="first-letter">Topic</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Cloudera</title>
+    <ns>0</ns>
+    <id>27059655</id>
+    <revision>
+      <id>718846355</id>
+      <parentid>718846072</parentid>
+      <timestamp>2016-05-05T23:58:40Z</timestamp>
+      <contributor>
+        <username>Faramir1138</username>
+        <id>13258862</id>
+      </contributor>
+      <comment>gave citation a name</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="17312">{{Infobox company
+| name              = Cloudera
+| logo              = Cloudera logo tag rgb.png
+| logo_size         = 220
+| logo_caption      = Cloudera, Inc. logo with tagline
+| type = Privately held
+| num_locations = Palo Alto, Chicago, San Francisco, New York, North Carolina, Virginia, Austin Texas, New Hampshire, Atlanta Georgia, Kirkland WA, McLean VA
+
+EMEA - London, Paris, Budapest.
+
+Asia / APJ - Shanghai China, Beijing China, Tokyo Japan, Singapore, Seoul Korea,  Melbourne Australia, India Chennai
+| industry = Software Development
+| products = Cloudera Manager, Cloudera Navigator, Gazzang, Cloudera Navigator Optimizer, Impala
+| services = [[Apache Hadoop]] distribution with support, professional services and training
+| num_employees     = 1,250&lt;ref name=&quot;cloudera.com&quot;&gt;{{cite web|url=http://www.cloudera.com/about-cloudera.html|title=About Cloudera|work=Cloudera}}&lt;/ref&gt;
+| homepage          = {{URL|http://www.cloudera.com/}}
+| location          = [[Palo Alto, California]]
+}}
+
+'''Cloudera Inc.''' is an American-based software company that provides [[Apache Hadoop]]-based software, support and services, and training to business customers.
+
+Cloudera's open-source Apache Hadoop distribution, CDH (Cloudera Distribution Including Apache Hadoop), targets enterprise-class deployments of that technology. Cloudera says that more than 50% of its engineering output is donated upstream to the various Apache-licensed open source projects (Apache Hive, Apache Avro, [[Apache HBase]], and so on) that combine to form the Hadoop platform. Cloudera is also a sponsor of the [[Apache Software Foundation]].&lt;ref name=&quot;Apache Software Foundation Sponsorship&quot;&gt;{{cite web|url=http://www.apache.org/foundation/sponsorship.html|title=Apache Software Foundation Sponsorship|accessdate=28 August 2012}}&lt;/ref&gt;
+
+==History==
+Three engineers from [[Google]], [[Yahoo]] and [[Facebook Inc.|Facebook]] ([[Christophe Bisciglia]], [[Amr Awadallah]] and [[Jeff Hammerbacher]], respectively) joined with a former [[Oracle Corporation|Oracle]] executive ([[Michael Olson|Mike Olson]]) to form Cloudera in 2008.&lt;ref&gt;{{cite news |url= http://bits.blogs.nytimes.com/2009/03/16/bottling-the-magic-behind-google-and-facebook/ |title= Bottling the Magic Behind Google an Facebook |last= Vance |first= Ashlee |date= 16 March 2009 |accessdate= 20 January 2014 |work=The New York Times}}&lt;/ref&gt; 
+Olson was the CEO of [[Sleepycat Software]], the creator of the open-source embedded database engine [[Berkeley DB]] (acquired by Oracle in 2006). 
+Awadallah was from [[Yahoo!|Yahoo]], where he ran one of the first business units using Hadoop for data analysis.&lt;ref&gt;{{cite web|url=http://articles.businessinsider.com/2012-01-31/news/31008410_1_yahoo-servers-and-storage-systems-oracle |title=This Former Yahoo-er's Startup Is So Hot, Even the CIA Invested In It |accessdate=28 August 2012 |deadurl=yes |archiveurl=https://web.archive.org/20120209182001/http://articles.businessinsider.com:80/2012-01-31/news/31008410_1_yahoo-servers-and-storage-systems-oracle |archivedate=February 9, 2012 }}&lt;/ref&gt;
+At Facebook Hammerbacher used Hadoop for building analytic applications involving massive volumes of user data.&lt;ref&gt;{{cite web|url=http://www.businessweek.com/magazine/content/11_17/b4225060960537.htm|title=This Tech Bubble Is Different|accessdate=28 August 2012}}&lt;/ref&gt;
+
+Architect [[Doug Cutting]], also a former chairman of the [[Apache Software Foundation]], authored the open-source [[Lucene]] and [[Nutch]] search technologies before he wrote the initial Hadoop software in 2004. He designed and managed a Hadoop storage and analysis cluster at Yahoo! before joining Cloudera in 2009.
+Chief operating officer was Kirk Dunn.&lt;ref&gt;{{cite web
+|url=http://investing.businessweek.com/research/stocks/private/person.asp?personId=1032567&amp;privcapId=5648440&amp;previousCapId=5648440&amp;previousTitle=PowerFile,%20Inc.
+|title=Bloomberg Business Week, Executive Profile Kirk Dunn 
+|accessdate=30 September 2012}}&lt;/ref&gt;
+
+In March 2009, Cloudera announced the availability of Cloudera Distribution Including [[Apache Software Foundation|Apache]] [[Hadoop]] in conjunction with a $5 million investment led by [[Accel Partners]].&lt;ref&gt;{{cite web|url=http://techcrunch.com/2009/03/16/cloudera-raises-5-million-series-a-round-for-hadoop-commercialization/|title=Cloudera Raises $5 Million Series A Round For Hadoop Commercialization|last=Wauters |first=Robin|date=16 March 2009|publisher=TechCrunch|accessdate=22 April 2010}}&lt;/ref&gt; In 2011, the company raised a further $40 million from [[Ignition Partners]], [[Accel Partners]], [[Greylock Partners]], [[Meritech Capital Partners]], and [[In-Q-Tel]], a [[venture capital]] firm with open connections to the [[CIA]].&lt;ref&gt;{{cite web|url=http://venturebeat.com/2011/11/07/hadoop-cloudera-funding-ignition-accel-greylock/|title=Hadoop-based startup Cloudera raises $40M from Ignition Partners, Accel, Greylock|accessdate=28 August 2012}}&lt;/ref&gt;
+
+In June 2013 Tom Reilly became chief executive, although Olson remained as chairman of the board and chief strategist. Reilly was chief executive at [[ArcSight]] when it was acquired by [[Hewlett-Packard]] in 2010.&lt;ref&gt;{{Cite news |title= Cloudera taps new CEO for inevitable IPO push or acquisition: Former CEO becomes chairman and chief strategist |author= Timothy Prickett Morgan |work= The Register |date= 20 June 2013 |url= http://www.theregister.co.uk/2013/06/20/cloudera_taps_new_ceo_for_inevitable_ipo_push_or_acquisition/ |accessdate= 20 January 2014 }}&lt;/ref&gt; In March 2014 Cloudera announced a $900 million funding round, led by Intel Capital ($740 million), for that Intel received 18% share in cloudera and Intel dropped its own Hadoop distribution and dedicated 70 Intel engineers to work exclusively on cloudera projects. With additional funds coming from T Rowe Price, Google Ventures and an affiliate of MSD Capital, L.P., the private investment firm for Michael S. Dell. and others.&lt;ref&gt;{{cite web|url=http://www.reuters.com/article/2014/03/31/us-intel-cloudera-idUSBREA2U0ME20140331|title=Intel invested $740 million to buy 18 percent of Cloudera|author=Noel Randewich|date=31 March 2014|work=Reuters}}&lt;/ref&gt;
+
+In January 2012 - Oracle announced exclusive partnership with Cloudera to provide first Big data Appliance powered by Cloudera&lt;ref&gt;{{cite web|url=http://www.oracle.com/us/corporate/press/1453796|title=Oracle Selects Cloudera to Provide Apache Hadoop Distribution and Tools for Oracle Big Data Appliance|publisher=}}&lt;/ref&gt;
+
+In January 2013 - Dell announced a strategic partnership with Cloudera&lt;ref&gt;{{cite web|url=http://www.dell.com/learn/us/en/555/solutions/hadoop-big-data-solution|title=Dell Apache Hadoop Solutions - Dell|author=Dell us|work=Dell}}&lt;/ref&gt;
+
+In March 2013 - Intel invested $740 Million in Cloudera for an 18% investment&lt;ref&gt;{{cite web|url=http://www.reuters.com/article/us-intel-cloudera-idUSBREA2U0ME20140331|title=Intel invested $740 million to buy 18 percent of Cloudera}}&lt;/ref&gt;
+
+In May 2013 - SAS announced a strategic partnership with Cloudera on how to driver predictive analytics with SAS software&lt;ref&gt;{{cite web|url=https://blog.cloudera.com/blog/2013/05/how-the-sas-and-cloudera-platforms-work-together/|title=How the SAS and Cloudera Platforms Work Together|work=Cloudera Engineering Blog}}&lt;/ref&gt;
+
+In June 2014 - Accenture announced - Data as a platform offering based on Cloudera&lt;ref&gt;{{cite web|url=https://newsroom.accenture.com/industries/systems-integration-technology/accenture-forms-alliance-with-cloudera-to-empower-enterprises-with-a-data-as-a-platform-offering.htm|title=Accenture Forms Alliance with Cloudera to Empower Enterprises with Data as a Platform Offering|publisher=}}&lt;/ref&gt;
+
+In June 2014 - Cloudera acquired Gazzang - this gives Cloudera the most secure Hadoop distribution on the marketplace. This delivers enterprise-grade data encryption and key management, addressing head on the challenges associated with securing and processing sensitive and legally protected data within the Hadoop ecosystem. Thus fulfilling a requirement in myriad compliance regulations like HIPAA-HITECH, PCI-DSS, FERPA and the EU Data Protection Directive.&lt;ref&gt;{{cite web|url=http://www.cloudera.com/about-cloudera/press-center/press-releases/2014-06-03-cloudera-strengthens-hadoop-security-with-acquisition-of-gazzang.html|title=cloudera strengthens hadoop security with acquisition of gazzang|work=Cloudera}}&lt;/ref&gt;
+
+In October 2014 - Cloudera announces the first PCI compliant hadoop distribution with MasterCard.&lt;ref&gt;{{cite web|url=http://www.cloudera.com/about-cloudera/press-center/press-releases/2014-10-22-cloudera-enterprise-certified-for-full-pci-compliance.html|title=cloudera enterprise certified for full pci compliance|work=Cloudera}}&lt;/ref&gt;
+
+In February 2015 - Deloitte announced a strategic alliance with Cloudera on Advanced Analytics&lt;ref&gt;{{cite web|url=http://www.cloudera.com/about-cloudera/press-center/press-releases/2015-02-19-cloudera-and-deloitte-announce-strategic-alliance.html|title=cloudera deloitte announce strategic alliance|work=Cloudera}}&lt;/ref&gt;
+
+In May 2015 - Capgemini announced SAP HANA - Cloudera Insight driven operations - get more for less with your SAP HANA installation with Cloudera Enterprise&lt;ref&gt;{{cite web|url=https://www.capgemini.com/resources/insights-driven-operations-with-sap-hana-and-cloudera-enterprise|title=Insights-Driven Operations with SAP HANA and Cloudera Enterprise|work=Capgemini Capgemini Worldwide}}&lt;/ref&gt;
+
+In July 9, 2015 - Cloudera announced partnership with Teradata - Integrated Enterprise ready Appliance for Hadoop&lt;ref&gt;{{cite web|url=http://www.cloudera.com/about-cloudera/press-center/press-releases/2015-07-09-cloudera-and-terdata-announce-enterprise-ready-appliance-for-hadoop.html|title=Cloudera and Teradata Announce Integrated, Enterprise-Ready Appliance for Hadoop|work=Cloudera}}&lt;/ref&gt;
+
+In September 2015 - Cloudera announced Kudu - New Apache Hadoop Storage for fast analytics on fast data&lt;ref&gt;{{cite web|url=https://blog.cloudera.com/blog/2015/09/kudu-new-apache-hadoop-storage-for-fast-analytics-on-fast-data/|title=Kudu: New Apache Hadoop Storage for Fast Analytics on Fast Data|work=Cloudera Engineering Blog}}&lt;/ref&gt;
+
+In September 2015 - Cloudera announced RecordService - Fine-grained security enforcement across the Hadoop ecosystem&lt;ref&gt;{{cite web|url=https://blog.cloudera.com/blog/2015/09/recordservice-for-fine-grained-security-enforcement-across-the-hadoop-ecosystem/|title=RecordService: For Fine-Grained Security Enforcement Across the Hadoop Ecosystem|work=Cloudera Engineering Blog}}&lt;/ref&gt;
+
+In September 2015 - Microsoft Azure announced full support of Cloudera Enterprise on Azure&lt;ref&gt;{{cite web|url=https://azure.microsoft.com/en-us/blog/full-cloudera-enterprise-edh-support-on-azure/|title=Full support of Cloudera Enterprise on Azure|publisher=Microsoft}}&lt;/ref&gt;
+
+In November 2015 - Cloudera announced that it had reached 1,000 employees.
+
+In Jan 2016 - TCS announced an IoT framework based on Cloudera for sensor data analytics&lt;ref&gt;{{cite web|url=http://www.cloudera.com/resources/solution-brief/tcs-sensor-data-analytics-iot-framework-with-cloudera.html|title=TCS Sensor Data Analytics IoT Framework with Cloudera|work=Cloudera}}&lt;/ref&gt;
+
+In Feb 2016 - EMC announces evolution in advanced storage with DSSD support for Cloudera&lt;ref&gt;{{cite web |url=http://www.emc.com/collateral/data-sheet/h14899-ds-d5-emc-dssd-and-cloudera-solution-brief.pdf |title=EMC DSSD and Cloudera Evolve Hadoop: Innovating to deliver high-performance enterprise analytics on Hadoop |publisher=[[EMC Corporation]] |year=2016 |accessdate=April 25, 2016}}&lt;/ref&gt;
+
+In March 2016 Cloudera announced onDemand Training. This allows consultants, Big data practitioners to take training at a time that suits their schedule.&lt;ref&gt;{{cite web|url=https://www.cloudera.com/training/ondemand-training.html|title=OnDemand Training|work=Cloudera}}&lt;/ref&gt;
+
+In 2016 - Cloudera has expanded their international teams with over 200 people employed in EMEA with staff in over 12 countries in EMEA.
+
+In March 2016 - Cloudera announced it had over 2,100 partners consisting of 450 Software and OEM, 1400 System Integrators and Resellers, 200 Platform and Cloud and 50 Data Systems. This means that your existing investment in ISVs, Hardware and platform partners is maintained with Cloudera. Cloudera has the largest partner eco-systems of all Hadoop Distributions.&lt;ref name=&quot;cloudera.com&quot;/&gt;
+
+==Products and services==
+Cloudera offers software, services and support in three different bundles:
+* Cloudera Enterprise includes CDH and an annual subscription license (per node) to Cloudera Manager and technical support. It comes in three editions: Basic, Flex, and Data Hub.
+* Cloudera Express includes CDH and a version of Cloudera Manager lacking enterprise features such as rolling upgrades and backup/disaster recovery, LDAP and SNMP integration.
+* CDH may be downloaded from Cloudera's website at no charge, but with no technical support nor Cloudera Manager.
+* Cloudera Navigator - is the only complete data governance solution for Hadoop, offering critical capabilities such as data discovery, continuous optimization, audit, lineage, metadata management, and policy enforcement. As part of Cloudera Enterprise, Cloudera Navigator is critical to enabling high-performance agile analytics, supporting continuous data architecture optimization, and meeting regulatory compliance requirements.&lt;ref&gt;{{cite web|url=https://cloudera.com/products/cloudera-navigator.html|title=Cloudera Navigator|work=Cloudera}}&lt;/ref&gt;
+* Cloudera Navigator Optimizer (beta) - A SaaS based tool to provides instant insights into your workloads and recommends optimization strategies to get the best results with Hadoop.&lt;ref&gt;{{cite web|url=https://optimizer.cloudera.com/|title=Cloudera Optimizer|publisher=}}&lt;/ref&gt;
+
+Services
+* Cloudera University - World class training provided by Cloudera university&lt;ref name=&quot;cloudera.com&quot;/&gt;
+* Cloudera Professional Services - World class professionals to help with customer success.&lt;ref&gt;{{cite web|url=http://www.cloudera.com/services-support/professional-services.html|title=Cloudera Professional Services|work=Cloudera}}&lt;/ref&gt;
+* Cloudera Support - World class support team available 24x7 to help customers proactively and predictively ensure success&lt;ref&gt;{{cite web|url=https://cloudera.com/services-support.html|title=Get support where and when you need it.|work=Cloudera}}&lt;/ref&gt;
+
+All versions may be downloaded from Cloudera's website.
+
+CDH contains the main, core elements of Hadoop that provide reliable, scalable distributed data processing of large data sets (chiefly [[MapReduce]] and HDFS), as well as other enterprise-oriented components that provide security, high availability, and integration with hardware and other software.&lt;ref&gt;{{cite web|url=http://www.informationweek.com/software/information-management/cloudera-releases-next-generation-hadoop/240001574/|title=Cloudera Releases Next-Generation Hadoop Platform|last=Henschen |first=Doug|date=6 June 2012|publisher=InformationWeek|accessdate=22 April 2010}}&lt;/ref&gt;
+
+In October 2012, Cloudera announced the [[Cloudera Impala]] project, an open-source distributed query engine for Apache Hadoop.&lt;ref&gt;{{cite web |url= http://www.zdnet.com/clouderas-impala-brings-hadoop-to-sql-and-bi-7000006413/|title=Cloudera’s Impala brings Hadoop to SQL and BI |last= Brust |first= Andrew |date= 25 October 2012 |work= ZDNet |accessdate= 20 January 2014 }}&lt;/ref&gt;
+
+==Awards==
+* In April 2010, Chief Scientist [[Jeff Hammerbacher]] was named a &quot;Best Young Tech Entrepreneur&quot; by Bloomberg BusinessWeek.&lt;ref&gt;{{cite web|url=http://www.businessweek.com/technology/special_reports/20100420best_young_tech_entrepreneurs.htm |title=Best Young Technology Entrepreneurs 2010 |accessdate=28 August 2012 |deadurl=yes |archiveurl=https://web.archive.org/20120707100946/http://www.businessweek.com:80/technology/special_reports/20100420best_young_tech_entrepreneurs.htm |archivedate=July 7, 2012 }}&lt;/ref&gt;
+* In June 2012, received [[Morgan Stanley]]'s &quot;CTO Award for Innovation&quot;.&lt;ref&gt;{{cite web|url=http://www.marketwatch.com/story/cloudera-honored-by-morgan-stanley-with-prestigious-cto-award-for-innovation-2012-06-28|title=Cloudera Honored by Morgan Stanley With Prestigious 'CTO Award for Innovation'|accessdate=28 August 2012}}{{dead link|date=November 2015}}&lt;/ref&gt;
+* In August 2012, CRN named Cloudera among the &quot;The 25 Coolest Emerging Vendors For 2012&quot;.&lt;ref&gt;{{cite web|url=http://www.crn.com/slide-shows/storage/240005642/the-25-coolest-emerging-vendors-for-2012.htm|title=The 25 Coolest Emerging Vendors For 2012|accessdate=28 August 2012}}&lt;/ref&gt;
+
+==References==
+{{reflist|30em}}
+
+==External links==
+* {{Official website|http://www.cloudera.com/}}
+* [https://optimizer.cloudera.com/ Cloudera Navigator Optimizer]
+* [http://www.cloudera.com/customers.html Cloudera Customers]
+* [https://azure.microsoft.com/en-us/marketplace/partners/cloudera/clouderaedhcloudera/  Cloudera on Azure]
+* [http://www.cloudera.com/partner-portal.html Cloudera partner Portal, Cloudera Connect]
+
+[[Category:Big data companies]]
+[[Category:Cloud computing providers]]
+[[Category:Cloud infrastructure]]
+[[Category:Distributed file systems]]
+[[Category:Hadoop]]
+[[Category:Software companies based in the San Francisco Bay Area]]</text>
+      <sha1>seselpyrrvmp0xs0dw668nwh9k6v7je</sha1>
+    </revision>
+  </page>
+</mediawiki>

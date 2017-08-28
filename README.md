@@ -1,3 +1,3 @@
-# spark
+#Projects
 
-This repo contains course projects of Data Science and Engineering with Spark Certificate from Databricks. 
+This repo contains my own projects or solutions. Please let me know if you have any questions.
