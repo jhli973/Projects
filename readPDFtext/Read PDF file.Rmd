@@ -1,0 +1,42 @@
+---
+title: "ConvertPDF"
+output: html_document
+---
+
+
+## Import packages
+
+```{r cars}
+library(pdftools)
+library(ReporteRsjars)
+library(ReporteRs)
+```
+
+## Read PDF file in Text format
+
+```{r , echo=FALSE}
+## change current working directory
+
+setwd('C:/Users/dbsnail/Projects/readPDFtext')
+
+## read PDF file
+cons <- pdf_text("constitution.pdf")
+## check content
+cat(cons[1])
+```
+
+## Save text content in word format
+
+```{r}
+doc<-docx()
+doc.filename <- "constitution.docx"
+doc <- addParagraph(doc, cons)
+writeDoc(doc,file=doc.filename)
+```
+
+## Save text content in text format
+
+```{r}
+fileConn <- file("constitution.txt")
+writeLines(cons, fileConn)
+```
