@@ -1,31 +1,37 @@
 ---
-title: "ConvertPDF"
+title: "Convert PDF File to Word or Text Format"
 output: html_document
 ---
 
+To run this file, you need to install packages **pdftools**, **ReporteRS**.
 
-## Import packages
+### Step 1. Import packages
 
-```{r cars}
+```{r, echo=TRUE}
+## disable warning message
+options(warn=-1)
+
+## Load packages
 library(pdftools)
 library(ReporteRsjars)
 library(ReporteRs)
 ```
 
-## Read PDF file in Text format
+### Step 2. Read PDF file in Text format
 
-```{r , echo=FALSE}
+```{r , echo=TRUE}
 ## change current working directory
 
 setwd('C:/Users/dbsnail/Projects/readPDFtext')
 
 ## read PDF file
 cons <- pdf_text("constitution.pdf")
-## check content
+
+## check content of the first page
 cat(cons[1])
 ```
 
-## Save text content in word format
+### Step 3. Save text content in word format
 
 ```{r}
 doc<-docx()
@@ -34,7 +40,7 @@ doc <- addParagraph(doc, cons)
 writeDoc(doc,file=doc.filename)
 ```
 
-## Save text content in text format
+### Step 4. Save text content in text format
 
 ```{r}
 fileConn <- file("constitution.txt")
